@@ -1,5 +1,9 @@
 ## Tailwind Regex List <!-- omit in toc -->
 
+A regex expressions for tailwind intellisense
+
+[Related Issue](https://github.com/tailwindlabs/tailwindcss-intellisense/issues/129)
+
 ### Table of contents <!-- omit in toc -->
 
 - [clsx](#clsx)
