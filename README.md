@@ -1,0 +1,88 @@
+## Tailwind Regex List <!-- omit in toc -->
+
+### Table of contents <!-- omit in toc -->
+
+- [clsx](#clsx)
+- [HeadlessUI Transition (React)](#headlessui-transition-react)
+- [classnames](#classnames)
+- [Plain Javascript Object](#plain-javascript-object)
+- [tailwind-rn](#tailwind-rn)
+
+---
+
+#### clsx
+
+```json
+["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+```
+
+```js
+clsx('p-4', 'text-center');
+```
+
+---
+
+#### HeadlessUI Transition (React)
+
+```json
+"(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+```
+
+```js
+<Transition
+  enter="transition-opacity duration-75"
+  enterFrom="opacity-0"
+  enterTo="opacity-100"
+  leave="transition-opacity duration-150"
+  leaveFrom="opacity-100"
+  leaveTo="opacity-0"
+>
+  I will fade in and out
+</Transition>
+```
+
+---
+
+#### classnames
+
+```json
+["classnames\\(([^)]*)\\)", "'([^']*)'"]
+```
+
+```js
+classnames('bg-red-500', 'uppercase');
+```
+
+Credits: [bradcl](https://github.com/bradlc)
+
+---
+
+#### Plain Javascript Object
+
+```json
+":\\s*?[\"'`]([^\"'`]*).*?,"
+```
+
+```js
+const styles = {
+  wrapper: 'flex flex-col',
+  navItem: 'relative mb-2 md:mb-0',
+  bullet: 'absolute w-2 h-2 2xl:w-4 2xl:h-4 bg-red rounded-full',
+};
+```
+
+Credits: [michaelschufi](https://github.com/michaelschufi)
+
+---
+
+#### tailwind-rn
+
+```json
+"tailwind\\('([^)]*)\\')", "'([^']*)'"
+```
+
+```js
+tailwind('pt-12 items-center');
+```
+
+Credits: [tommulkins](https://github.com/tommulkins)
