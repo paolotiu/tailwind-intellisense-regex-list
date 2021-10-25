@@ -4,6 +4,8 @@ A regex expressions for tailwind intellisense
 
 [Related Issue](https://github.com/tailwindlabs/tailwindcss-intellisense/issues/129)
 
+[Blog Post](https://www.paolotiu.com/blog/get-tailwind-intellisense-anywhere)
+
 ### Table of contents <!-- omit in toc -->
 
 - [clsx](#clsx)
