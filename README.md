@@ -87,6 +87,11 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 "tailwind\\('([^)]*)\\')", "'([^']*)'"
 ```
 
+> Note:
+> You might have to add "style" to the `Class Attributes` setting of the Tailwind CSS Extension 
+> 
+> Related: https://github.com/vadimdemedes/tailwind-rn/issues/100#issuecomment-1036813662
+
 ```js
 tailwind('pt-12 items-center');
 ```
