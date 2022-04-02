@@ -84,7 +84,7 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 #### tailwind-rn
 
 ```json
-"tailwind\\('([^)]*)\\')", "'([^']*)'"
+"tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^']*)(?:'|\"|`)"
 ```
 
 > Note:
