@@ -13,6 +13,7 @@ A regex expressions for tailwind intellisense
 - [classnames](#classnames)
 - [Plain Javascript Object](#plain-javascript-object)
 - [tailwind-rn](#tailwind-rn)
+- [cva](#cva)
 
 ---
 
@@ -98,8 +99,9 @@ tailwind('pt-12 items-center');
 
 Credits: [tommulkins](https://github.com/tommulkins)
 
-#### cva ([class-variance-authority](https://github.com/joe-bell/cva))
+#### cva 
 
+> [class-variance-authority](https://github.com/joe-bell/cva)
 ```js
 ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
 ```
