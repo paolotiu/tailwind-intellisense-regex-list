@@ -97,3 +97,11 @@ tailwind('pt-12 items-center');
 ```
 
 Credits: [tommulkins](https://github.com/tommulkins)
+
+#### cva ([class-variance-authority](https://github.com/joe-bell/cva))
+
+```js
+["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+```
+
+Credits: [Joe Bell](https://github.com/joe-bell)
