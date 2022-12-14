@@ -107,3 +107,11 @@ Credits: [tommulkins](https://github.com/tommulkins)
 ```
 
 Credits: [Joe Bell](https://github.com/joe-bell)
+
+### classList
+
+```js
+["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"]
+```
+
+Credits: [carere](https://github.com/carere)
