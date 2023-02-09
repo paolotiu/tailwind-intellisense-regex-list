@@ -14,6 +14,8 @@ A regex expressions for tailwind intellisense
 - [Plain Javascript Object](#plain-javascript-object)
 - [tailwind-rn](#tailwind-rn)
 - [cva](#cva)
+- [classList](#classlist)
+- [tailwind-join](#tailwind-join)
 
 ---
 
@@ -108,10 +110,18 @@ Credits: [tommulkins](https://github.com/tommulkins)
 
 Credits: [Joe Bell](https://github.com/joe-bell)
 
-### classList
+#### classList
 
 ```js
 ["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"]
 ```
 
 Credits: [carere](https://github.com/carere)
+
+#### tailwind-join
+
+> [tailwind-join](https://github.com/satelllte/tailwind-join)
+```js
+["twJoin\\(([^)]*)\\)", "'([^']*)'"]
+```
+Credits: [satelllte](https://github.com/satelllte)
