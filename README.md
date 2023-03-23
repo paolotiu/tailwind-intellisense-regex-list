@@ -42,7 +42,7 @@ clsx('p-4', 'text-center');
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+  "(?:enter|leave)(?:From|To)?=\\s*(?:\"|'|{`)([^(?:\"|'|`})]*)"
  ]
 ```
 
@@ -66,7 +66,7 @@ clsx('p-4', 'text-center');
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["classnames\\(([^)]*)\\)", "'([^']*)'"]
+  ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
 ]
 
 # Take note of the outer square brackets!
@@ -162,7 +162,7 @@ Credits: [carere](https://github.com/carere)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["twJoin\\(([^)]*)\\)", "'([^']*)'"]
+  ["twJoin\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
 ]
 
 # Take note of the outer square brackets!
@@ -174,7 +174,7 @@ Credits: [satelllte](https://github.com/satelllte)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"]([^'\"`,;]*)[`'\"]"]
+  ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"`]([^'\"`,;]*)[`'\"`]"]
 ]        
 ```
 
