@@ -20,6 +20,7 @@ A regex expressions for tailwind intellisense
 ---
 
 #### clsx
+> [clsx](https://github.com/lukeed/clsx)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
@@ -36,6 +37,7 @@ clsx('p-4', 'text-center');
 ---
 
 #### HeadlessUI Transition (React)
+> [HeadlessUI React](https://headlessui.com/)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
@@ -59,6 +61,7 @@ clsx('p-4', 'text-center');
 ---
 
 #### classnames
+> [classnames](https://github.com/JedWatson/classnames)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
@@ -97,7 +100,7 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 ---
 
 #### tailwind-rn
-
+> [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
 ```json
 "tailwindCSS.experimental.classRegex": [
   "tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^']*)(?:'|\"|`)"
@@ -110,9 +113,7 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 > Related: https://github.com/vadimdemedes/tailwind-rn/issues/100#issuecomment-1036813662
 
 ```js
-"tailwindCSS.experimental.classRegex": [
-  tailwind('pt-12 items-center');
-]
+tailwind('pt-12 items-center');
 ```
 
 Credits: [tommulkins](https://github.com/tommulkins)
@@ -120,7 +121,8 @@ Credits: [tommulkins](https://github.com/tommulkins)
 #### cva 
 
 > [class-variance-authority](https://github.com/joe-bell/cva)
-```js
+
+```json
 "tailwindCSS.experimental.classRegex": [
   ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
 ]
@@ -128,11 +130,22 @@ Credits: [tommulkins](https://github.com/tommulkins)
 # Take note of the outer square brackets!
 ```
 
+```js
+cva("rounded", {
+  variants: {
+    size: {
+      sm: "p-4",
+      md: "p-6"
+    }
+  }
+})
+```
+
 Credits: [Joe Bell](https://github.com/joe-bell)
 
 #### classList
 
-```js
+```json
 "tailwindCSS.experimental.classRegex": [
   ["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"]
 ]
@@ -145,7 +158,8 @@ Credits: [carere](https://github.com/carere)
 #### tailwind-join
 
 > [tailwind-join](https://github.com/satelllte/tailwind-join)
-```js
+
+```json
 "tailwindCSS.experimental.classRegex": [
   ["twJoin\\(([^)]*)\\)", "'([^']*)'"]
 ]
