@@ -22,7 +22,11 @@ A regex expressions for tailwind intellisense
 #### clsx
 
 ```json
-["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+"tailwindCSS.experimental.classRegex": [
+  ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+]
+
+# Take note of the outer square brackets!
 ```
 
 ```js
@@ -34,7 +38,9 @@ clsx('p-4', 'text-center');
 #### HeadlessUI Transition (React)
 
 ```json
-"(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+"tailwindCSS.experimental.classRegex": [
+  "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+ ]
 ```
 
 ```js
@@ -55,7 +61,11 @@ clsx('p-4', 'text-center');
 #### classnames
 
 ```json
-["classnames\\(([^)]*)\\)", "'([^']*)'"]
+"tailwindCSS.experimental.classRegex": [
+  ["classnames\\(([^)]*)\\)", "'([^']*)'"]
+]
+
+# Take note of the outer square brackets!
 ```
 
 ```js
@@ -69,7 +79,9 @@ Credits: [bradcl](https://github.com/bradlc)
 #### Plain Javascript Object
 
 ```json
-":\\s*?[\"'`]([^\"'`]*).*?,"
+"tailwindCSS.experimental.classRegex": [
+  ":\\s*?[\"'`]([^\"'`]*).*?,"
+]
 ```
 
 ```js
@@ -87,7 +99,9 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 #### tailwind-rn
 
 ```json
-"tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^']*)(?:'|\"|`)"
+"tailwindCSS.experimental.classRegex": [
+  "tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^']*)(?:'|\"|`)"
+]
 ```
 
 > Note:
@@ -96,7 +110,9 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 > Related: https://github.com/vadimdemedes/tailwind-rn/issues/100#issuecomment-1036813662
 
 ```js
-tailwind('pt-12 items-center');
+"tailwindCSS.experimental.classRegex": [
+  tailwind('pt-12 items-center');
+]
 ```
 
 Credits: [tommulkins](https://github.com/tommulkins)
@@ -105,7 +121,11 @@ Credits: [tommulkins](https://github.com/tommulkins)
 
 > [class-variance-authority](https://github.com/joe-bell/cva)
 ```js
-["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+"tailwindCSS.experimental.classRegex": [
+  ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+]
+
+# Take note of the outer square brackets!
 ```
 
 Credits: [Joe Bell](https://github.com/joe-bell)
@@ -113,7 +133,11 @@ Credits: [Joe Bell](https://github.com/joe-bell)
 #### classList
 
 ```js
-["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"]
+"tailwindCSS.experimental.classRegex": [
+  ["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"]
+]
+
+# Take note of the outer square brackets!
 ```
 
 Credits: [carere](https://github.com/carere)
@@ -122,6 +146,10 @@ Credits: [carere](https://github.com/carere)
 
 > [tailwind-join](https://github.com/satelllte/tailwind-join)
 ```js
-["twJoin\\(([^)]*)\\)", "'([^']*)'"]
+"tailwindCSS.experimental.classRegex": [
+  ["twJoin\\(([^)]*)\\)", "'([^']*)'"]
+]
+
+# Take note of the outer square brackets!
 ```
 Credits: [satelllte](https://github.com/satelllte)
