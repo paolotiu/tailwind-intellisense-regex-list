@@ -16,6 +16,7 @@ A regex expressions for tailwind intellisense
 - [cva](#cva)
 - [classList](#classlist)
 - [tailwind-join](#tailwind-join)
+- [tailwind-merge](#tailwind-merge)
 
 ---
 
@@ -167,3 +168,18 @@ Credits: [carere](https://github.com/carere)
 # Take note of the outer square brackets!
 ```
 Credits: [satelllte](https://github.com/satelllte)
+
+#### tailwind-merge
+> [tailwind-merge]
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"]([^'\"`,;]*)[`'\"]"]
+]        
+```
+
+```js
+twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
+```
+
+Credits: [bradennapier](https://github.com/bradennapier)
