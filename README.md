@@ -104,7 +104,7 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 > [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
 ```json
 "tailwindCSS.experimental.classRegex": [
-  "tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^']*)(?:'|\"|`)"
+  "tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"
 ]
 ```
 
