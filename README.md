@@ -182,4 +182,11 @@ Credits: [satelllte](https://github.com/satelllte)
 twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
 ```
 
+# EVERYWHERE!
+For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
+
+```jsonc
+"tailwindCSS.experimental.classRegex": ["([a-zA-Z0-9\\-:]+)"]
+```
+
 Credits: [bradennapier](https://github.com/bradennapier)
