@@ -17,8 +17,8 @@ A regex expressions for tailwind intellisense
 - [classList](#classlist)
 - [tailwind-join](#tailwind-join)
 - [tailwind-merge](#tailwind-merge)
+- [Literally everywhere](#everywhere)
 
----
 
 #### clsx
 > [clsx](https://github.com/lukeed/clsx)
@@ -154,6 +154,7 @@ Credits: [Joe Bell](https://github.com/joe-bell)
 # Take note of the outer square brackets!
 ```
 
+
 Credits: [carere](https://github.com/carere)
 
 #### tailwind-join
@@ -182,7 +183,7 @@ Credits: [satelllte](https://github.com/satelllte)
 twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
 ```
 
-# EVERYWHERE!
+## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
 
 ```json
@@ -190,5 +191,16 @@ For those who are just looking for a quick fix and want to enable tailwind intel
   "([a-zA-Z0-9\\-:]+)"
 ]
 ```
+```js
+pt-1
+"pt-1"
+const x = "pt-1"
+// Will literally trigger everywhere
+```
+> Note:
+> The intellisense for tailwind will show up everytime you type a letter, so it might get annoying.
+> Only use this if you are 100% sure!
+>
+> **Create an issue if you are trying to find a regex to match a certain pattern**
 
 Credits: [bradennapier](https://github.com/bradennapier)
