@@ -182,6 +182,7 @@ Credits: [satelllte](https://github.com/satelllte)
 ```js
 twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
 ```
+Credits: [bradennapier](https://github.com/bradennapier)
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
@@ -203,4 +204,4 @@ const x = "pt-1"
 >
 > **Create an issue if you are trying to find a regex to match a certain pattern**
 
-Credits: [bradennapier](https://github.com/bradennapier)
+Credits: [Elbasel](https://github.com/Elbasel)
