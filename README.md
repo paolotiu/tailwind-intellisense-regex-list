@@ -184,6 +184,22 @@ twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
 ```
 Credits: [bradennapier](https://github.com/bradennapier)
 
+#### HAML
+> [HAML]
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  [ "class: ?\"([^\"]*)\"", "([a-zA-Z0-9\\-:]+)" ],
+  [ "(\\.[\\w\\-.]+)[\\n\\=\\{\\s]", "([\\w\\-]+)" ],
+]
+
+# Take note of the outer square brackets!
+```
+
+``` haml
+ %section.text-right.uppercase.font-extralight{class: "leading-[1.1rem]"} lorem
+```
+
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
 
