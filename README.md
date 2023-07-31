@@ -17,6 +17,7 @@ A regex expressions for tailwind intellisense
 - [classList](#classlist)
 - [tailwind-join](#tailwind-join)
 - [tailwind-merge](#tailwind-merge)
+- [HAML](#haml)
 - [Literally everywhere](#everywhere)
 
 
@@ -199,6 +200,8 @@ Credits: [bradennapier](https://github.com/bradennapier)
 ``` haml
  %section.text-right.uppercase.font-extralight{class: "leading-[1.1rem]"} lorem
 ```
+
+Credits: [S1M1S](https://github.com/S1M1S)
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
