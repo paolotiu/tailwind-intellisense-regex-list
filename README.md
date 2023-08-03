@@ -18,6 +18,8 @@ A regex expressions for tailwind intellisense
 - [tailwind-join](#tailwind-join)
 - [tailwind-merge](#tailwind-merge)
 - [HAML](#haml)
+- [JQuery](#jquery)
+- [DOM](#DOM)
 - [Literally everywhere](#everywhere)
 
 
@@ -202,6 +204,41 @@ Credits: [bradennapier](https://github.com/bradennapier)
 ```
 
 Credits: [S1M1S](https://github.com/S1M1S)
+
+#### JQuery
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["(?:add|remove)Class\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+]
+
+# Take note of the outer square brackets!
+```
+
+```js
+$('body').addClass('bg-red-500');
+$('body').removeClass('bg-red-500');
+```
+
+Credits: [alexvipond](https://gitbub.com/alexvipond)
+
+#### DOM
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["classList.(?:add|remove)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+]
+
+# Take note of the outer square brackets!
+```
+
+```js
+document.body.classList.add('bg-red-500');
+document.body.classList.remove('bg-red-500');
+```
+
+Credits: [alexvipond](https://gitbub.com/alexvipond)
+
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
