@@ -103,6 +103,20 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 
 ---
 
+#### JavaScript string
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  "(?:const|let|var)\\s+[\\w$_][_\\w\\d]*\\s*=\\s*['\\\"](.*?)['\\\"]"
+]
+```
+
+```js
+const inputClassNames = "scroll-m-0 border-collapse";
+```
+
+---
+
 #### tailwind-rn
 > [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
 ```json
