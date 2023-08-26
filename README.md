@@ -12,6 +12,7 @@ A regex expressions for tailwind intellisense
 - [HeadlessUI Transition (React)](#headlessui-transition-react)
 - [classnames](#classnames)
 - [Plain Javascript Object](#plain-javascript-object)
+- [JavaScript string variable](#javascript-string-variable)
 - [tailwind-rn](#tailwind-rn)
 - [cva](#cva)
 - [classList](#classlist)
@@ -103,7 +104,7 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 
 ---
 
-#### JavaScript string
+#### JavaScript string variable
 
 ```json
 "tailwindCSS.experimental.classRegex": [
