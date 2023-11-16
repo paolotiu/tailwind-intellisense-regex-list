@@ -20,7 +20,8 @@ A regex expressions for tailwind intellisense
 - [tailwind-merge](#tailwind-merge)
 - [HAML](#haml)
 - [JQuery](#jquery)
-- [DOM](#DOM)
+- [DOM](#dom)
+- [Comment Tagging](#comment-tagging)
 - [Literally everywhere](#everywhere)
 
 
@@ -254,6 +255,18 @@ document.body.classList.remove('bg-red-500');
 
 Credits: [alexvipond](https://gitbub.com/alexvipond)
 
+#### Comment Tagging
+```json
+"tailwindCSS.experimental.classRegex": [
+  "@tw\\s\\*\/\\s+[\"'`]([^\"'`]*)"
+]
+```
+
+```js
+/** @tw */ "px-5 text-center bg-white py-16 &:not[hidden]"
+```
+
+Credits: [james2doyle](https://github.com/james2doyle)
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
