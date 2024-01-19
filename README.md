@@ -22,6 +22,7 @@ A regex expressions for tailwind intellisense
 - [JQuery](#jquery)
 - [DOM](#dom)
 - [Comment Tagging](#comment-tagging)
+- [Laravel Blade directives and component attribute functions](#laravel-blade-directives-and-component-attribute-functions)
 - [Literally everywhere](#everywhere)
 
 
@@ -267,6 +268,25 @@ Credits: [alexvipond](https://gitbub.com/alexvipond)
 ```
 
 Credits: [james2doyle](https://github.com/james2doyle)
+
+#### Laravel Blade directives and component attribute functions
+
+> [Laravel Blade Templates](https://laravel.com/docs/10.x/blade)
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["@?class\\(([^]*)\\)", "'([^']*)'"],
+  "(?:\"|')class(?:\"|')[\\s]*=>[\\s]*(?:\"|')([^\"']*)"
+]
+```
+
+```php
+@class(['bg-red-500', 'text-white'])
+$attributes->class(['bg-red-500', 'text-white'])
+$attributes->merge(['class' => 'bg-red-500 text-white'])
+```
+
+Credits: [czernika](https://github.com/czernika) and [Nicholas Davidson](https://github.com/ndavidson7)
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
