@@ -13,6 +13,7 @@ A regex expressions for tailwind intellisense
 - [classnames](#classnames)
 - [Plain Javascript Object](#plain-javascript-object)
 - [JavaScript string variable](#javascript-string-variable)
+- [JavaScript string variable with keywords](#javascript-string-variable-with-keywords)
 - [tailwind-rn](#tailwind-rn)
 - [cva](#cva)
 - [classList](#classlist)
@@ -117,6 +118,28 @@ Credits: [michaelschufi](https://github.com/michaelschufi)
 ```js
 const inputClassNames = "scroll-m-0 border-collapse";
 ```
+
+---
+
+#### JavaScript string variable with keywords
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"]
+]
+```
+
+```js
+const styles = "bg-red-500 text-white";
+let Classes = "p-4 rounded";
+var classnames = "flex justify-center";
+const buttonStyles = "bg-blue-500 hover:bg-blue-700";
+let formClasses = "space-y-4";
+var inputClassnames = "border-2 border-gray-300";
+styles += 'rounded';
+```
+
+Credits: [mxmalykhin](https://github.com/mxmalykhin)
 
 ---
 
