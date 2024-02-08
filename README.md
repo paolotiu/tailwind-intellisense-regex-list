@@ -218,7 +218,7 @@ Credits: [satelllte](https://github.com/satelllte)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"`]([^'\"`,;]*)[`'\"`]"]
+    ["(?:twMerge|twJoin)\\(([^;]*)[\\);]", "[`'\"`]([^'\"`;]*)[`'\"`]"]
 ]        
 ```
 
