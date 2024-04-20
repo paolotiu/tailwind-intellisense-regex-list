@@ -8,26 +8,11 @@ A regex expressions for tailwind intellisense
 
 ### Table of contents <!-- omit in toc -->
 
-- [clsx](#clsx)
-- [HeadlessUI Transition (React)](#headlessui-transition-react)
-- [classnames](#classnames)
-- [Plain Javascript Object](#plain-javascript-object)
-- [JavaScript string variable](#javascript-string-variable)
-- [JavaScript string variable with keywords](#javascript-string-variable-with-keywords)
-- [tailwind-rn](#tailwind-rn)
-- [cva](#cva)
-- [classList](#classlist)
-- [tailwind-join](#tailwind-join)
-- [tailwind-merge](#tailwind-merge)
-- [HAML](#haml)
-- [JQuery](#jquery)
-- [DOM](#dom)
-- [Comment Tagging](#comment-tagging)
-- [Laravel Blade directives and component attribute functions](#laravel-blade-directives-and-component-attribute-functions)
-- [Literally everywhere](#everywhere)
-
+- [](#) - [tailwind-rn](#tailwind-rn) - [cva](#cva) - [classList](#classlist) - [tailwind-join](#tailwind-join) - [tailwind-merge](#tailwind-merge) - [HAML](#haml) - [JQuery](#jquery) - [DOM](#dom) - [Comment Tagging](#comment-tagging) - [Laravel Blade directives and component attribute functions](#laravel-blade-directives-and-component-attribute-functions)
+  - [EVERYWHERE!!!](#everywhere)
 
 #### clsx
+
 > [clsx](https://github.com/lukeed/clsx)
 
 ```json
@@ -39,12 +24,13 @@ A regex expressions for tailwind intellisense
 ```
 
 ```js
-clsx('p-4', 'text-center');
+clsx("p-4", "text-center");
 ```
 
 ---
 
 #### HeadlessUI Transition (React)
+
 > [HeadlessUI React](https://headlessui.com/)
 
 ```json
@@ -69,6 +55,7 @@ clsx('p-4', 'text-center');
 ---
 
 #### classnames
+
 > [classnames](https://github.com/JedWatson/classnames)
 
 ```json
@@ -80,7 +67,7 @@ clsx('p-4', 'text-center');
 ```
 
 ```js
-classnames('bg-red-500', 'uppercase');
+classnames("bg-red-500", "uppercase");
 ```
 
 Credits: [bradcl](https://github.com/bradlc)
@@ -97,9 +84,9 @@ Credits: [bradcl](https://github.com/bradlc)
 
 ```js
 const styles = {
-  wrapper: 'flex flex-col',
-  navItem: 'relative mb-2 md:mb-0',
-  bullet: 'absolute w-2 h-2 2xl:w-4 2xl:h-4 bg-red rounded-full',
+  wrapper: "flex flex-col",
+  navItem: "relative mb-2 md:mb-0",
+  bullet: "absolute w-2 h-2 2xl:w-4 2xl:h-4 bg-red rounded-full",
 };
 ```
 
@@ -136,15 +123,41 @@ var classnames = "flex justify-center";
 const buttonStyles = "bg-blue-500 hover:bg-blue-700";
 let formClasses = "space-y-4";
 var inputClassnames = "border-2 border-gray-300";
-styles += 'rounded';
+styles += "rounded";
 ```
 
 Credits: [mxmalykhin](https://github.com/mxmalykhin)
 
 ---
 
+#### TypeScript or JavaScript, string or array with keyword
+Edit Styles keyword to target different variable names/suffixes
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["Styles\\s*(?::\\s*[^=]+)?\\s*=\\s*([^;]*);", "['\"`]([^'\"`]*)['\"`]"]
+]
+```
+
+Examples:
+
+```ts
+const variableStyles: (string | undefined)[] = [
+  className,
+  showCaret ? 'pr-1' : '',
+  icon ? 'px-1.5 py-0.5' : 'px-3 py-1',
+];
+```
+
+```js
+const baseStyles = `items-center flex p-5 mx-2 my-1`;
+```
+
+---
+
 #### tailwind-rn
+
 > [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
+
 ```json
 "tailwindCSS.experimental.classRegex": [
   "tailwind\\('([^)]*)\\')", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"
@@ -152,17 +165,17 @@ Credits: [mxmalykhin](https://github.com/mxmalykhin)
 ```
 
 > Note:
-> You might have to add "style" to the `Class Attributes` setting of the Tailwind CSS Extension 
-> 
+> You might have to add "style" to the `Class Attributes` setting of the Tailwind CSS Extension
+>
 > Related: https://github.com/vadimdemedes/tailwind-rn/issues/100#issuecomment-1036813662
 
 ```js
-tailwind('pt-12 items-center');
+tailwind("pt-12 items-center");
 ```
 
 Credits: [tommulkins](https://github.com/tommulkins)
 
-#### cva 
+#### cva
 
 > [class-variance-authority](https://github.com/joe-bell/cva)
 
@@ -179,10 +192,10 @@ cva("rounded", {
   variants: {
     size: {
       sm: "p-4",
-      md: "p-6"
-    }
-  }
-})
+      md: "p-6",
+    },
+  },
+});
 ```
 
 Credits: [Joe Bell](https://github.com/joe-bell)
@@ -197,7 +210,6 @@ Credits: [Joe Bell](https://github.com/joe-bell)
 # Take note of the outer square brackets!
 ```
 
-
 Credits: [carere](https://github.com/carere)
 
 #### tailwind-join
@@ -211,23 +223,27 @@ Credits: [carere](https://github.com/carere)
 
 # Take note of the outer square brackets!
 ```
+
 Credits: [satelllte](https://github.com/satelllte)
 
 #### tailwind-merge
+
 > [tailwind-merge]
 
 ```json
 "tailwindCSS.experimental.classRegex": [
     ["(?:twMerge|twJoin)\\(([^;]*)[\\);]", "[`'\"`]([^'\"`;]*)[`'\"`]"]
-]        
+]
 ```
 
 ```js
-twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
+twMerge("p-8 rounded bg-slate-500", "pt-10 bg-slate-800");
 ```
+
 Credits: [bradennapier](https://github.com/bradennapier)
 
 #### HAML
+
 > [HAML]
 
 ```json
@@ -239,7 +255,7 @@ Credits: [bradennapier](https://github.com/bradennapier)
 # Take note of the outer square brackets!
 ```
 
-``` haml
+```haml
  %section.text-right.uppercase.font-extralight{class: "leading-[1.1rem]"} lorem
 ```
 
@@ -256,8 +272,8 @@ Credits: [S1M1S](https://github.com/S1M1S)
 ```
 
 ```js
-$('body').addClass('bg-red-500');
-$('body').removeClass('bg-red-500');
+$("body").addClass("bg-red-500");
+$("body").removeClass("bg-red-500");
 ```
 
 Credits: [alexvipond](https://gitbub.com/alexvipond)
@@ -273,13 +289,14 @@ Credits: [alexvipond](https://gitbub.com/alexvipond)
 ```
 
 ```js
-document.body.classList.add('bg-red-500');
-document.body.classList.remove('bg-red-500');
+document.body.classList.add("bg-red-500");
+document.body.classList.remove("bg-red-500");
 ```
 
 Credits: [alexvipond](https://gitbub.com/alexvipond)
 
 #### Comment Tagging
+
 ```json
 "tailwindCSS.experimental.classRegex": [
   "@tw\\s\\*\/\\s+[\"'`]([^\"'`]*)"
@@ -287,7 +304,7 @@ Credits: [alexvipond](https://gitbub.com/alexvipond)
 ```
 
 ```js
-/** @tw */ "px-5 text-center bg-white py-16 &:not[hidden]"
+/** @tw */ "px-5 text-center bg-white py-16 &:not[hidden]";
 ```
 
 Credits: [james2doyle](https://github.com/james2doyle)
@@ -312,6 +329,7 @@ $attributes->merge(['class' => 'bg-red-500 text-white'])
 Credits: [czernika](https://github.com/czernika) and [Nicholas Davidson](https://github.com/ndavidson7)
 
 ## EVERYWHERE!!!
+
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
 
 ```json
@@ -319,12 +337,14 @@ For those who are just looking for a quick fix and want to enable tailwind intel
   "([a-zA-Z0-9\\-:]+)"
 ]
 ```
+
 ```js
-pt-1
-"pt-1"
-const x = "pt-1"
+pt - 1;
+("pt-1");
+const x = "pt-1";
 // Will literally trigger everywhere
 ```
+
 > Note:
 > The intellisense for tailwind will show up everytime you type a letter, so it might get annoying.
 > Only use this if you are 100% sure!
