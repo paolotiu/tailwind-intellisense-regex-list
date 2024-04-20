@@ -144,7 +144,7 @@ Credits: [mxmalykhin](https://github.com/mxmalykhin)
 ---
 
 #### TypeScript or JavaScript, string or array with keyword
-Edit Styles keyword to target different variable names/suffixes
+>Edit Styles keyword to target different variable names/suffixes
 ```json
 "tailwindCSS.experimental.classRegex": [
   ["Styles\\s*(?::\\s*[^=]+)?\\s*=\\s*([^;]*);", "['\"`]([^'\"`]*)['\"`]"]
@@ -164,6 +164,7 @@ const variableStyles: (string | undefined)[] = [
 ```js
 const baseStyles = `items-center flex p-5 mx-2 my-1`;
 ```
+Credits: [avgvstvs96](https://github.com/avgvstvs96)
 
 ---
 
