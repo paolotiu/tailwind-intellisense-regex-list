@@ -14,6 +14,7 @@ A regex expressions for tailwind intellisense
 - [Plain Javascript Object](#plain-javascript-object)
 - [JavaScript string variable](#javascript-string-variable)
 - [JavaScript string variable with keywords](#javascript-string-variable-with-keywords)
+- [TypeScript or JavaScript variables, strings or arrays with keyword](#typescript-or-javascript-variables-strings-or-arrays-with-keyword)
 - [tailwind-rn](#tailwind-rn)
 - [cva](#cva)
 - [classList](#classlist)
@@ -142,6 +143,39 @@ styles += 'rounded';
 Credits: [mxmalykhin](https://github.com/mxmalykhin)
 
 ---
+
+#### TypeScript or JavaScript variables, strings or arrays with keyword
+
+Captures Tailwind classes based on the following patterns:
+
+- variables ending with a "Styles" suffix and with or without TS types.
+- classes within single quotes, double quotes, or backticks
+- classes within strings or arrays
+
+> Edit Styles keyword to target different variable names/suffixes
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["Styles\\s*(?::\\s*[^=]+)?\\s*=\\s*([^;]*);", "['\"`]([^'\"`]*)['\"`]"]
+]
+```
+
+Examples:
+
+```ts
+const variableStyles: (string | undefined)[] = [
+  className,
+  showCaret ? 'pr-1' : '',
+  icon ? 'px-1.5 py-0.5' : 'px-3 py-1',
+];
+```
+
+```js
+const baseStyles = `items-center flex p-5 mx-2 my-1`;
+```
+Credits: [avgvstvs96](https://github.com/avgvstvs96)
+
+---
+
 
 #### tailwind-rn
 > [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
