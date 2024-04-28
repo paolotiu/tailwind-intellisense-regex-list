@@ -25,6 +25,7 @@ A regex expressions for tailwind intellisense
 - [DOM](#dom)
 - [Comment Tagging](#comment-tagging)
 - [Laravel Blade directives and component attribute functions](#laravel-blade-directives-and-component-attribute-functions)
+- [Stimulus CSS Classes](#stimulus-css-classes)
 - [Literally everywhere](#everywhere)
 
 
@@ -344,6 +345,22 @@ $attributes->merge(['class' => 'bg-red-500 text-white'])
 ```
 
 Credits: [czernika](https://github.com/czernika) and [Nicholas Davidson](https://github.com/ndavidson7)
+
+#### Stimulus CSS Classes
+> [Stimulus CSS Classes](https://stimulus.hotwired.dev/reference/css-classes)
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["data-.*-class=['\"]([^'\"]*)"]
+]
+```
+
+```html
+<form data-controller="search"
+      data-search-loading-class="bg-gray-500 animate-spinner cursor-busy">
+  <input data-action="search#loadResults">
+</form>
+```
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
