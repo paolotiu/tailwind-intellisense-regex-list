@@ -20,6 +20,7 @@ A regex expressions for tailwind intellisense
 - [classList](#classlist)
 - [tailwind-join](#tailwind-join)
 - [tailwind-merge](#tailwind-merge)
+- [tailwind-variants](#tailwind-variants)
 - [HAML](#haml)
 - [JQuery](#jquery)
 - [DOM](#dom)
@@ -261,6 +262,31 @@ Credits: [satelllte](https://github.com/satelllte)
 twMerge('p-8 rounded bg-slate-500', 'pt-10 bg-slate-800')
 ```
 Credits: [bradennapier](https://github.com/bradennapier)
+
+#### tailwind-variants
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["tv\\(([^)]*)\\)", "{?\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?}?"]
+]
+
+# Take note of the outer square brackets!
+```
+
+```js
+tv({
+  base: 'bg-gray-500 grid grid-cols-1 gap-0 tablet:grid-cols-2 mx-auto my-0 p-0 w-full',
+  variants: {
+    threeColumn: {
+      true: 'three-column grid-cols-3 tablet:grid-cols-3 mb-2'
+    },
+    twoColumn: {
+      true: 'grid-cols-2'
+    }
+  }
+})
+```
+
+Credits: [magicink](https://github.com/magicink)
 
 #### HAML
 > [HAML]
