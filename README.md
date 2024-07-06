@@ -27,6 +27,7 @@ A regex expressions for tailwind intellisense
 - [Comment Tagging](#comment-tagging)
 - [Laravel Blade directives and component attribute functions](#laravel-blade-directives-and-component-attribute-functions)
 - [Stimulus CSS Classes](#stimulus-css-classes)
+- [Tagged Template Literals](#tagged-template-literals)
 - [Literally everywhere](#everywhere)
 
 
@@ -387,6 +388,23 @@ Credits: [czernika](https://github.com/czernika) and [Nicholas Davidson](https:/
   <input data-action="search#loadResults">
 </form>
 ```
+
+#### Tagged Template Literals
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  [
+    "tw`((([^`]*\\$\\{.*\\})[^`]*)+|[^`]*`)",
+    "`(?:(?:`)([^\\\"'`]*)(?:\\${|`))|(?:(?:\\})([^\\\"'`]*)(?:\\${|`))|(?:'|\\\"|`)([^\\\"'`]*)(?:'|\\\"|`)"
+  ]
+]
+```
+
+```js
+tw`bg-black ${ok ? 'text-white' : `text-red-500 ${errorClassName}`} ${className}`
+```
+
+Credits: [sxxov](https://github.com/sxxov)
 
 ## EVERYWHERE!!!
 For those who are just looking for a quick fix and want to enable tailwind intellisense everywhere.
