@@ -359,7 +359,7 @@ Credits: [james2doyle](https://github.com/james2doyle)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["@?class\\(([^]*)\\)", "'([^']*)'"],
+  ["@?class\\(([^)]*)\\)", "['|\"]([^'\"]*)['|\"]"],
   "(?:\"|')class(?:\"|')[\\s]*=>[\\s]*(?:\"|')([^\"']*)"
 ]
 ```
