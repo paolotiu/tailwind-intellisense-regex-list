@@ -341,6 +341,21 @@ document.body.classList.toggle('hidden');
 
 Credits: [alexvipond](https://gitbub.com/alexvipond)
 
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["\\s*.className\\s*=\\s*['\\\"](.*?)['\\\"]"]
+]
+
+# Take note of the outer square brackets!
+```
+
+```js
+document.body.className = 'bg-red-500';
+yourCustumEl.className = 'bg-red-500';
+```
+
+Credits: [dennisdotg](https://gitbub.com/dennisdotg)
+
 #### Comment Tagging
 ```json
 "tailwindCSS.experimental.classRegex": [
