@@ -327,7 +327,7 @@ Credits: [alexvipond](https://gitbub.com/alexvipond)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["classList.(?:add|remove)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+  ["classList.(?:add|remove|toggle)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
 ]
 
 # Take note of the outer square brackets!
@@ -336,6 +336,7 @@ Credits: [alexvipond](https://gitbub.com/alexvipond)
 ```js
 document.body.classList.add('bg-red-500');
 document.body.classList.remove('bg-red-500');
+document.body.classList.toggle('hidden');
 ```
 
 Credits: [alexvipond](https://gitbub.com/alexvipond)
