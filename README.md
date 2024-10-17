@@ -12,6 +12,7 @@ A regex expressions for tailwind intellisense
 - [HeadlessUI Transition (React)](#headlessui-transition-react)
 - [classnames](#classnames)
 - [Plain Javascript Object](#plain-javascript-object)
+- [Nested Object](#nested-object-inside-a-plain-javascript-object)
 - [JavaScript string variable](#javascript-string-variable)
 - [JavaScript string variable with keywords](#javascript-string-variable-with-keywords)
 - [TypeScript or JavaScript variables, strings or arrays with keyword](#typescript-or-javascript-variables-strings-or-arrays-with-keyword)
@@ -107,6 +108,27 @@ const styles = {
 ```
 
 Credits: [michaelschufi](https://github.com/michaelschufi)
+
+---
+
+#### Nested object inside a plain javascript object
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  [
+    "classNames:\\s*{([\\s\\S]*?)}",
+    "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"
+  ]
+]
+```
+
+```js
+const props = {
+    classNames: {
+      container: "w-full h-full"
+   }
+}
+```
 
 ---
 
