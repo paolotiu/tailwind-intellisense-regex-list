@@ -22,6 +22,7 @@ A regex expressions for tailwind intellisense
 - [tailwind-join](#tailwind-join)
 - [tailwind-merge](#tailwind-merge)
 - [tailwind-variants](#tailwind-variants)
+- [tailwind-modifier](#tailwind-modifier)
 - [HAML](#haml)
 - [JQuery](#jquery)
 - [DOM](#dom)
@@ -309,6 +310,20 @@ tv({
 ```
 
 Credits: [magicink](https://github.com/magicink)
+
+#### tailwind-modifier
+> [tailwind-modifier]
+
+```json
+  "tailwindCSS.experimental.classRegex": [
+    ["twMod[a-zA-Z_]*\\(([^)]*)\\)", "(?:'|\"|`|,)*([^'\"`,]*)(?:'|\"|`|,)"]
+  ]
+```
+
+```js
+twMod('w-full,h-full sm:w-[80%]', {md: ['px-8,py-10']})
+```
+Credits: [magicink](https://github.com/ajatkj)
 
 #### HAML
 > [HAML]
