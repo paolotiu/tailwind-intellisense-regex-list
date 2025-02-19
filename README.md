@@ -15,6 +15,7 @@ A regex expressions for tailwind intellisense
 - [Nested Object](#nested-object-inside-a-plain-javascript-object)
 - [JavaScript string variable](#javascript-string-variable)
 - [JavaScript string variable with keywords](#javascript-string-variable-with-keywords)
+- [JavaScript object variable with keywords](#javascript-object-variable-with-keywords)
 - [TypeScript or JavaScript variables, strings or arrays with keyword](#typescript-or-javascript-variables-strings-or-arrays-with-keyword)
 - [tailwind-rn](#tailwind-rn)
 - [cva](#cva)
@@ -166,6 +167,49 @@ styles += 'rounded';
 ```
 
 Credits: [mxmalykhin](https://github.com/mxmalykhin)
+
+---
+
+#### JavaScript object variable with keywords
+
+```json
+"tailwindCSS.experimental.classRegex": [
+  [
+    "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*=\\s*{([\\s\\S]*?)}",
+    "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"
+  ]
+]
+```
+
+> **Note:** It doesn't handle nested objects well, as it stops at the first closing curly brace (`}`).
+
+```ts
+const styles = {
+  default: 'bg-red-500 text-white',
+} as const;
+
+let Classes = {
+  default: 'p-4 rounded',
+} as const;
+
+var classnames = {
+  default: 'flex justify-center',
+} as const;
+
+const buttonStyles = {
+  default: 'bg-blue-500 hover:bg-blue-700',
+} as const;
+
+let formClasses = {
+  default: 'space-y-4',
+} as const;
+
+var inputClassnames = {
+  default: 'border-2 border-gray-300',
+} as const;
+```
+
+Credits: [sebastien-comeau](https://github.com/sebastien-comeau)
 
 ---
 
