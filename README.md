@@ -37,7 +37,7 @@ A regex expressions for tailwind intellisense
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+  ["clsx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 ]
 
 # Take note of the outer square brackets!
