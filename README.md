@@ -7,7 +7,7 @@ A regex expressions for tailwind intellisense
 [Blog Post](https://www.paolotiu.com/blog/get-tailwind-intellisense-anywhere)
 
 ### Table of contents <!-- omit in toc -->
-
+- [String Endings](#string-endings)
 - [clsx](#clsx)
 - [HeadlessUI Transition (React)](#headlessui-transition-react)
 - [classnames](#classnames)
@@ -31,7 +31,16 @@ A regex expressions for tailwind intellisense
 - [Tagged Template Literals](#tagged-template-literals)
 - [Literally everywhere](#everywhere)
 
-
+#### String Endings (most useful)
+this will match all strings in your code that ends with any of `Style`, `ClassName` and `ClassNames`.
+i.e `const mainStyle = "..."`, `const mainClassName = "..."` and `const classNames = "..."`
+```json
+"tailwindCSS.experimental.classRegex": [
+  ["\\b\\w*Style\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+  ["\\b\\w*ClassName\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+  ["\\b\\w*ClassNames\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+],
+```
 #### clsx
 > [clsx](https://github.com/lukeed/clsx)
 
