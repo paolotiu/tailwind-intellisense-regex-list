@@ -236,7 +236,7 @@ Credits: [tommulkins](https://github.com/tommulkins)
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ["cva\\(([^;]*)[\\);]", "[`'\"`]([^'\"`;]*)[`'\"`]"]
 ]
 
 # Take note of the outer square brackets!
@@ -247,7 +247,8 @@ cva("rounded", {
   variants: {
     size: {
       sm: "p-4",
-      md: "p-6"
+      md: "p-6",
+      lg: "p-(lg-padding)" // Supports referencing variables 
     }
   }
 })
