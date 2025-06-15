@@ -47,7 +47,7 @@ i.e `const mainStyle = "..."`, `const mainClassName = "..."` and `const classNam
 
 ```json
 "tailwindCSS.experimental.classRegex": [
-  ["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"]
+  ["clsx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 ]
 
 # Take note of the outer square brackets!
